@@ -30,6 +30,13 @@
         overflow:hidden;
       }
     </style>
+    
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=es"></script>
+    <script src="mapa.js"></script>
+
+    
 </head>
 <body>
   <div id="map-canvas"></div>
@@ -39,12 +46,6 @@
 
         <h2>Centros de Salud</h2>
         <p>Abajo encontrará una lista de los centros de salud que pertenecen a la red de Corposalud Aragua.</p>
-        <a href="javascript:clear_markers()">BORRAR</a>
-
-
-
-
-
 
 
         <form>
@@ -52,8 +53,8 @@
             <div class="form-group">
               <label for="select" class="col-lg-2 control-label">Municipio:</label>
               <div class="col-lg-10">
-                <select class="form-control" id="munic_selector">
-                  <option onclick="javascript:select_zone(-1)">Todos</option>
+                <select class="form-control" id="munic_selector" onchange="select_zone(getSelectedText(this.id))">
+                  <option value="-1">Todos</option>
                 </select>
                 <br>
               </div>
@@ -70,16 +71,6 @@
     </div>
   </div>
   <!-- end template -->
-  
-  
-  
-  
-  
-  <script src="jquery.min.js"></script>
-  <script src="bootstrap.js"></script>
-  <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=es"></script>
-  <script src="mapa.js"></script>
-  
-  
+
 </body>
 </html>

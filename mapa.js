@@ -98,12 +98,22 @@ function select_zone(id_zone){
   map.fitBounds(limits);
 
 }
+
+function getSelectedText(elementId) {
+    var elt = document.getElementById(elementId);
+
+    if (elt.selectedIndex == -1)
+        return null;
+
+    return elt.options[elt.selectedIndex].value;
+}
+
 function print_municipios(data){
   
   var frm_locations = document.getElementById("munic_selector");
   for (i=0; i < data.length; i++){
     var spn = document.createElement("option");
-    spn.setAttribute("onclick", "javascript:select_zone(" + data[i].id + ")");
+    spn.setAttribute("value", data[i].id);
     spn.innerHTML = data[i].nombre;
     frm_locations.appendChild(spn);
   }
