@@ -57,6 +57,10 @@ function clear_markers() {
   marker_list.length = 0;
 }
 
+function clear_locations() {
+  var frm_locations = document.getElementById("map_selector").innerHTML="";
+}
+
 function set_all_map(objmap) {
   for (var i = 0; i < marker_list.length; i++) {
     marker_list[i].setMap(objmap);
@@ -74,7 +78,8 @@ function get_limits(mlist){
 function select_zone(id_zone){
   
   var mlist = [];
-  clear_markers()
+  clear_markers();
+  clear_locations();
   
   for (i=0; i < json_content.length; i++){
     row = json_content[i];
