@@ -36,84 +36,33 @@
   <div class="container-fluid" id="main">
     <div class="row">
       <div class="col-xs-5" id="left">
-      
+
         <h2>Centros de Salud</h2>
-        
         <p>Abajo encontrará una lista de los centros de salud que pertenecen a la red de Corposalud Aragua.</p>
-        
-        <form class="form-horizontal">
+        <a href="javascript:clear_markers()">BORRAR</a>
+
+
+
+
+
+
+
+        <form>
           <fieldset>
-            <legend>Filtrar:</legend>
-            
             <div class="form-group">
-              <label class="col-lg-2 control-label">Tipo</label>
-              
-              <div class="radio" name="optionRadio">
-                <label>
-                  <input type="radio" name="optionRadio"> Hospital
-                </label>
-                <label>
-                  <input type="radio" name="optionRadio"> Ambulatorio
-                </label>
-                <label>
-                  <input type="radio" name="optionRadio"> NAP
-                </label>
-                <label>
-                  <input type="radio" name="optionRadio"> CDI
-                </label>
-                <label>
-                  <input type="radio" name="optionRadio"> SRI
-                </label>
+              <label for="select" class="col-lg-2 control-label">Municipio:</label>
+              <div class="col-lg-10">
+                <select class="form-control" id="munic_selector">
+                  <option onclick="javascript:select_zone(-1)">Todos</option>
+                </select>
+                <br>
               </div>
             </div>
           </fieldset>
         </form>
-        
+
         <div id="map_selector">
         </div>
-        
-        <!-- item list -->
-        <!--
-        <div class="panel panel-default">
-          <div class="panel-heading"><a href="">Item heading</a></div>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-          Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-          dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-          Aliquam in felis sit amet augue.</p>
-        
-        <hr>
-        
-        <div class="panel panel-default">
-          <div class="panel-heading"><a href="">Item heading</a></div>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-          Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-          dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-          Aliquam in felis sit amet augue.</p>
-        
-        <hr>
-        
-        <div class="panel panel-default">
-          <div class="panel-heading"><a href="">Item heading</a></div>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-          Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-          dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-          Aliquam in felis sit amet augue.</p>
-        
-        <hr>
-        
-        <div class="panel panel-default">
-          <div class="panel-heading"><a href="">Item heading</a></div>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-          Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-          dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-          Aliquam in felis sit amet augue.</p>
-        
-        <hr>
-        <!-- /item list -->
 
       </div>
       <div class="col-xs-7"><!--map-canvas will be postioned here--></div>

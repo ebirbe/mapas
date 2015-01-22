@@ -7,7 +7,7 @@ $dbconn = pg_connect("host=localhost dbname=mapas user=postgres password=postgre
     or die('No se ha podido conectar: ' . pg_last_error());
 
 // Realizando una consulta SQL
-$query = "SELECT
+/*$query = "SELECT
 	municipios.id as munic_id,
 	municipios.nombre as munic_nombre,
 	parroquias.id as parro_id,
@@ -22,7 +22,9 @@ FROM
 	JOIN municipios ON (municipios.id = coordenadas.codmuni)
 ORDER BY
 	municipios.nombre ASC,
-	coordenadas.nombre ASC";
+	coordenadas.nombre ASC";*/
+  
+$query = "SELECT id, nombre FROM municipios ORDER BY nombre ASC";
 $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 // Printing JSON
